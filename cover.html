@@ -1,0 +1,2564 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>gophermart: Go Coverage Report</title>
+		<style>
+			body {
+				background: black;
+				color: rgb(80, 80, 80);
+			}
+			body, pre, #legend span {
+				font-family: Menlo, monospace;
+				font-weight: bold;
+			}
+			#topbar {
+				background: black;
+				position: fixed;
+				top: 0; left: 0; right: 0;
+				height: 42px;
+				border-bottom: 1px solid rgb(80, 80, 80);
+			}
+			#content {
+				margin-top: 50px;
+			}
+			#nav, #legend {
+				float: left;
+				margin-left: 10px;
+			}
+			#legend {
+				margin-top: 12px;
+			}
+			#nav {
+				margin-top: 10px;
+			}
+			#legend span {
+				margin: 0 5px;
+			}
+			.cov0 { color: rgb(192, 0, 0) }
+.cov1 { color: rgb(128, 128, 128) }
+.cov2 { color: rgb(116, 140, 131) }
+.cov3 { color: rgb(104, 152, 134) }
+.cov4 { color: rgb(92, 164, 137) }
+.cov5 { color: rgb(80, 176, 140) }
+.cov6 { color: rgb(68, 188, 143) }
+.cov7 { color: rgb(56, 200, 146) }
+.cov8 { color: rgb(44, 212, 149) }
+.cov9 { color: rgb(32, 224, 152) }
+.cov10 { color: rgb(20, 236, 155) }
+
+		</style>
+	</head>
+	<body>
+		<div id="topbar">
+			<div id="nav">
+				<select id="files">
+				
+				<option value="file0">github.com/AndreyVLZ/silver-goggles/cmd/gophermart/main.go (0.0%)</option>
+				
+				<option value="file1">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/app.go (0.0%)</option>
+				
+				<option value="file2">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/http/handler/handler.go (13.3%)</option>
+				
+				<option value="file3">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/http/handler/order.go (97.7%)</option>
+				
+				<option value="file4">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/http/handler/user.go (100.0%)</option>
+				
+				<option value="file5">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/http/route.go (0.0%)</option>
+				
+				<option value="file6">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/http/server.go (0.0%)</option>
+				
+				<option value="file7">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order/accrual.go (30.0%)</option>
+				
+				<option value="file8">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order/balance.go (100.0%)</option>
+				
+				<option value="file9">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order/id.go (16.7%)</option>
+				
+				<option value="file10">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order/info.go (50.0%)</option>
+				
+				<option value="file11">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order/number.go (100.0%)</option>
+				
+				<option value="file12">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order/order.go (22.2%)</option>
+				
+				<option value="file13">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order/status.go (28.6%)</option>
+				
+				<option value="file14">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/user/authuser.go (100.0%)</option>
+				
+				<option value="file15">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/user/id.go (42.9%)</option>
+				
+				<option value="file16">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/user/user.go (53.3%)</option>
+				
+				<option value="file17">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/middle/log.go (0.0%)</option>
+				
+				<option value="file18">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/middle/middle.go (0.0%)</option>
+				
+				<option value="file19">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/pkg/bcrypt/bcrypt.go (0.0%)</option>
+				
+				<option value="file20">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/pkg/hash/hash.go (0.0%)</option>
+				
+				<option value="file21">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/repository/accrual/accrual.go (0.0%)</option>
+				
+				<option value="file22">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/repository/fakeaccrual/fakeaccrual.go (0.0%)</option>
+				
+				<option value="file23">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/repository/postgres/postgres.go (0.0%)</option>
+				
+				<option value="file24">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/service/auth/auth.go (47.4%)</option>
+				
+				<option value="file25">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/service/internal/error.go (0.0%)</option>
+				
+				<option value="file26">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/service/order/getting.go (0.0%)</option>
+				
+				<option value="file27">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/service/order/saved.go (0.0%)</option>
+				
+				<option value="file28">github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/service/order/update.go (0.0%)</option>
+				
+				</select>
+			</div>
+			<div id="legend">
+				<span>not tracked</span>
+			
+				<span class="cov0">not covered</span>
+				<span class="cov8">covered</span>
+			
+			</div>
+		</div>
+		<div id="content">
+		
+		<pre class="file" id="file0" style="display: none">package main
+
+import (
+        "context"
+        "flag"
+        "log"
+        "os"
+        "os/signal"
+
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app"
+)
+
+func main() <span class="cov0" title="0">{
+        addrPtr := flag.String("a", app.AddresDef, "адрес и порт запуска сервиса")
+        dbURIPtr := flag.String("d", app.DatabaseURIDef, "строка с адресом подключения к БД")
+        accAddrPtr := flag.String("r", app.AccAddresDef, "адрес системы расчёта начислений")
+        flag.Parse()
+
+        opts := []app.FuncOpt{
+                app.SetAddr(*addrPtr),
+                app.SetDBURI(*dbURIPtr),
+                app.SetAccNetAddr(*accAddrPtr),
+        }
+
+        if addrENV, ok := os.LookupEnv("RUN_ADDRESS"); ok </span><span class="cov0" title="0">{
+                opts = append(opts, app.SetAddr(addrENV))
+        }</span>
+
+        <span class="cov0" title="0">if dbConnENV, ok := os.LookupEnv("DATABASE_URI"); ok </span><span class="cov0" title="0">{
+                opts = append(opts, app.SetDBURI(dbConnENV))
+        }</span>
+
+        <span class="cov0" title="0">if accAddrENV, ok := os.LookupEnv("ACCRUAL_SYSTEM_ADDRESS"); ok </span><span class="cov0" title="0">{
+                opts = append(opts, app.SetAccNetAddr(accAddrENV))
+        }</span>
+
+        <span class="cov0" title="0">cfg, err := app.NewConfig(opts...)
+        if err != nil </span><span class="cov0" title="0">{
+                log.Printf("parse config: %v\n", err)
+        }</span>
+
+        <span class="cov0" title="0">app := app.New(cfg)
+
+        ctx := context.Background()
+
+        chErr := make(chan error)
+        go func(ce chan&lt;- error) </span><span class="cov0" title="0">{
+                defer close(ce)
+                ce &lt;- app.Start()
+        }</span>(chErr)
+
+        <span class="cov0" title="0">ctxSinal, stopSignal := signal.NotifyContext(ctx, os.Interrupt)
+        select </span>{
+        case &lt;-ctxSinal.Done():<span class="cov0" title="0">
+                log.Println("signal")</span>
+        case err := &lt;-chErr:<span class="cov0" title="0">
+                stopSignal()
+                if err != nil </span><span class="cov0" title="0">{
+                        log.Printf("app start err %v\n", err)
+                }</span>
+        }
+
+        <span class="cov0" title="0">if err := app.Stop(ctx); err != nil </span><span class="cov0" title="0">{
+                log.Printf("app stop err: %v\n", err)
+        }</span> else<span class="cov0" title="0"> {
+                log.Println("all services stoppped")
+        }</span>
+
+        <span class="cov0" title="0">log.Println("app stopped")</span>
+}
+</pre>
+		
+		<pre class="file" id="file1" style="display: none">package app
+
+import (
+        "context"
+        "errors"
+        "fmt"
+        "log/slog"
+        "net/url"
+        "os"
+        "time"
+
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/http"
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/http/handler"
+        m "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/middle"
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/pkg/bcrypt"
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/pkg/hash"
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/repository/accrual"
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/repository/postgres"
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/service/auth"
+        ordSrv "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/service/order"
+)
+
+const (
+        AddresDef      string = "localhost:8080"
+        AccAddresDef   string = "localhost:8081"
+        DatabaseURIDef string = "postgres://root:root@localhost:5432/test_db?sslmode=disable"
+)
+
+type Config struct {
+        Addr   string
+        DBConn string
+        AccURL *url.URL
+}
+
+type FuncOpt func(*Config) error
+
+func NewConfig(opts ...FuncOpt) (*Config, error) <span class="cov0" title="0">{
+        cfg := &amp;Config{}
+        for i := range opts </span><span class="cov0" title="0">{
+                if err := opts[i](cfg); err != nil </span><span class="cov0" title="0">{
+                        return nil, fmt.Errorf("newConfig: %w", err)
+                }</span>
+        }
+
+        <span class="cov0" title="0">return cfg, nil</span>
+}
+
+type api interface {
+        Start() error
+        Stop(context.Context) error
+}
+
+type service interface {
+        Start() error
+        Stop() error
+        Name() string
+}
+
+type app struct {
+        api api
+        Services
+        log *slog.Logger
+        cfg *Config
+}
+
+type Services []service
+
+func (srvs *Services) add(arrSrvs ...service) <span class="cov0" title="0">{ *srvs = append(*srvs, arrSrvs...) }</span>
+
+func New(cfg *Config) *app <span class="cov0" title="0">{
+        log := initLog()
+        updateInterval := 6
+
+        pqStore := postgres.New(postgres.Config{ConnDB: cfg.DBConn})
+
+        auther := handler.NewAuthBycookie("cookieKey")
+
+        bcHashe := hash.NewHashe(bcrypt.Hash, bcrypt.Compare)
+        authSrv := auth.NewAuthService(pqStore, bcHashe) // service
+        userHandler := handler.NewUserHandler(authSrv, auther.Set, log)
+
+        accRepo := accrual.New(cfg.AccURL)
+
+        saveSrv := ordSrv.NewSaveService(accRepo, pqStore) // service save
+        orderSrv := ordSrv.NewOrderService(pqStore)        // service get
+        orderHandler := handler.NewOrderHandler(saveSrv, orderSrv, log)
+
+        uSrv := ordSrv.NewUService(accRepo, pqStore, updateInterval, log) // service update
+
+        r := http.NewRouter()
+
+        // группа маршрутов logger
+        r.Group("/api/user", func(r http.Router) </span><span class="cov0" title="0">{ //prefix
+                r.Use(m.Logger(log)) // middle group
+
+                r.Handle("/register", // pattern
+                        m.Use(
+                                userHandler.Register(), // handler
+                                m.Post(),               // check method
+                                m.AppJSON(),            // check contentType
+                        ),
+                )
+
+                r.Handle("/login",
+                        m.Use(
+                                userHandler.Login(),
+                                m.Post(),
+                                m.AppJSON(),
+                        ),
+                )
+
+                // группа маршрутов auth
+                r.Group("/", func(r http.Router) </span><span class="cov0" title="0">{
+                        r.Use(m.AuthByFunc(handler.GetContextKey(), auther.Check)) // auth
+
+                        r.Handle("/orders",
+                                m.Select{
+                                        Get: m.Use(
+                                                orderHandler.GetOrders(),
+                                        ),
+                                        Post: m.Use(
+                                                orderHandler.LoadHandle(),
+                                                m.TextPlain(),
+                                        ),
+                                },
+                        )
+
+                        r.Handle("/balance",
+                                m.Use(
+                                        orderHandler.Balance(),
+                                        m.Get(),
+                                ),
+                        )
+
+                        r.Handle("/balance/withdraw",
+                                m.Use(
+                                        orderHandler.Withdraw(),
+                                        m.Post(),
+                                        m.AppJSON(),
+                                ),
+                        )
+
+                        r.Handle("/withdrawals",
+                                m.Use(
+                                        orderHandler.Withdrawals(),
+                                        m.Get(),
+                                ),
+                        )
+                }</span>)
+        })
+
+        <span class="cov0" title="0">httpServer := http.NewServer(
+                http.ServerConfig{Addr: cfg.Addr}, *r,
+        )
+
+        app := &amp;app{
+                api: httpServer,
+                log: log,
+                cfg: cfg,
+        }
+
+        app.Services.add(
+                uSrv,
+                pqStore,
+        )
+
+        return app</span>
+}
+
+func (app *app) Start() error <span class="cov0" title="0">{
+        app.log.Info("start server",
+                "addr", app.cfg.Addr,
+                "dbConn", app.cfg.DBConn,
+                "accURL", app.cfg.AccURL.String(),
+        )
+
+        for i := range app.Services </span><span class="cov0" title="0">{
+                if err := app.Services[i].Start(); err != nil </span><span class="cov0" title="0">{
+                        return err
+                }</span>
+                <span class="cov0" title="0">app.log.Info("start service", "name", app.Services[i].Name())</span>
+        }
+
+        <span class="cov0" title="0">return app.api.Start()</span>
+}
+
+func (app *app) Stop(ctx context.Context) error <span class="cov0" title="0">{
+        ctxTimeout, stopTimeout := context.WithTimeout(ctx, 5*time.Second)
+        defer stopTimeout()
+
+        errs := make([]error, 0, len(app.Services)+1)
+        if err := app.api.Stop(ctxTimeout); err != nil </span><span class="cov0" title="0">{
+                errs = append(errs, err)
+        }</span>
+
+        <span class="cov0" title="0">for _, srv := range app.Services </span><span class="cov0" title="0">{
+                if err := srv.Stop(); err != nil </span><span class="cov0" title="0">{
+                        errs = append(errs, fmt.Errorf("service [%s] err: %w", srv.Name(), err))
+                        continue</span>
+                }
+                <span class="cov0" title="0">app.log.Info("stop service", "name", srv.Name())</span>
+        }
+
+        <span class="cov0" title="0">return errors.Join(errs...)</span>
+}
+
+func initLog() *slog.Logger <span class="cov0" title="0">{
+        opts := &amp;slog.HandlerOptions{
+                Level: slog.LevelDebug,
+        }
+
+        return slog.New(slog.NewJSONHandler(os.Stdout, opts))
+}</span>
+
+func SetAddr(addr string) FuncOpt <span class="cov0" title="0">{
+        return func(s *Config) error </span><span class="cov0" title="0">{
+                s.Addr = addr
+                return nil
+        }</span>
+}
+
+func SetDBURI(dbConn string) FuncOpt <span class="cov0" title="0">{
+        return func(s *Config) error </span><span class="cov0" title="0">{
+                s.DBConn = dbConn
+                return nil
+        }</span>
+}
+
+func SetAccNetAddr(accAddr string) FuncOpt <span class="cov0" title="0">{
+        return func(s *Config) error </span><span class="cov0" title="0">{
+                u, err := url.Parse(accAddr)
+                if err != nil </span><span class="cov0" title="0">{
+                        return err
+                }</span>
+                <span class="cov0" title="0">s.AccURL = u
+
+                return nil</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file2" style="display: none">package handler
+
+import (
+        "encoding/json"
+        "fmt"
+        "io"
+        "log/slog"
+        "net/http"
+)
+
+var (
+        statusOK         = http.StatusOK                  // 200
+        statusAccepted   = http.StatusAccepted            // 202
+        statusNoContent  = http.StatusNoContent           // 204
+        statusBadReq     = http.StatusBadRequest          // 400
+        statusUnauth     = http.StatusUnauthorized        // 401
+        statusPaymentReq = http.StatusPaymentRequired     // 402
+        statusConflict   = http.StatusConflict            // 409
+        statusUnprocess  = http.StatusUnprocessableEntity // 422
+        statusInternal   = http.StatusInternalServerError // 500
+)
+
+type errFieldConflict interface {
+        Data() any
+        error
+}
+
+type AuthByCookie struct {
+        cookieKey string
+}
+
+func NewAuthBycookie(cookieKey string) AuthByCookie <span class="cov0" title="0">{
+        return AuthByCookie{cookieKey: cookieKey}
+}</span>
+
+func (auth AuthByCookie) Check(req *http.Request) (string, error) <span class="cov0" title="0">{
+        reqCookie, err := req.Cookie(auth.cookieKey)
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+        <span class="cov0" title="0">slog.Debug("authByCockie", "value", reqCookie.Value, "key", auth.cookieKey)
+
+        return reqCookie.Value, nil</span>
+}
+
+func (auth AuthByCookie) Set(rw http.ResponseWriter, data string) <span class="cov0" title="0">{
+        slog.Debug("authByCockie", "value", data, "key", auth.cookieKey)
+        http.SetCookie(rw, &amp;http.Cookie{
+                Name:  auth.cookieKey,
+                Value: data,
+                Path:  "/",
+        })
+}</span>
+
+type AuthByHeader struct {
+        headerKey string
+}
+
+func NewAuthByHeader(headerKey string) AuthByHeader <span class="cov0" title="0">{
+        return AuthByHeader{headerKey: headerKey}
+}</span>
+
+func (auth AuthByHeader) Check(req *http.Request) (string, error) <span class="cov0" title="0">{
+        if idVal := req.Header.Get(auth.headerKey); idVal != "" </span><span class="cov0" title="0">{
+                return idVal, nil
+        }</span>
+        <span class="cov0" title="0">return "", fmt.Errorf("err: parseHeader [%s]", auth.headerKey)</span>
+}
+
+func (auth AuthByHeader) Set(rw http.ResponseWriter, data string) <span class="cov0" title="0">{
+        rw.Header().Set(auth.headerKey, data)
+}</span>
+
+func parseBody(r io.ReadCloser, data any) error <span class="cov8" title="1">{
+        defer r.Close()
+        return json.NewDecoder(r).Decode(data)
+}</span>
+</pre>
+		
+		<pre class="file" id="file3" style="display: none">package handler
+
+import (
+        "context"
+        "encoding/json"
+        "errors"
+        "io"
+        "log/slog"
+        "net/http"
+        "time"
+
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order"
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/user"
+)
+
+// ORDER
+type saveOrderService interface {
+        LoadOrder(context.Context, user.ID, order.Number) error
+        Withdraw(context.Context, order.Order) error
+}
+
+type orderService interface {
+        GetOrders(context.Context, user.ID) ([]order.Order, error)
+        Withdrawals(context.Context, user.ID) ([]order.Order, error)
+        Balance(context.Context, user.ID) (order.Balance, error)
+}
+
+type OrderHandler struct {
+        saveService saveOrderService
+        getService  orderService
+        log         *slog.Logger
+}
+
+func NewOrderHandler(saveService saveOrderService, getService orderService, log *slog.Logger) OrderHandler <span class="cov8" title="1">{
+        return OrderHandler{saveService: saveService, getService: getService, log: log}
+}</span>
+
+type errWithdraw interface {
+        IsSuccessful() bool
+        error
+}
+
+type contextKey struct{}
+
+func GetContextKey() contextKey <span class="cov8" title="1">{ return contextKey{} }</span>
+
+func userIDFromReq(req *http.Request) (user.ID, error) <span class="cov8" title="1">{
+        ctxKey := GetContextKey()
+        v := req.Context().Value(ctxKey)
+
+        userID, ok := v.(user.ID)
+        if !ok </span><span class="cov8" title="1">{
+                return user.NillID(), errors.New("err parse userID")
+        }</span>
+
+        <span class="cov8" title="1">return userID, nil</span>
+}
+
+func parseBodyToString(r io.ReadCloser) (string, error) <span class="cov8" title="1">{
+        defer r.Close()
+        b, err := io.ReadAll(r)
+        if err != nil </span><span class="cov8" title="1">{
+                return "", err
+        }</span>
+        <span class="cov8" title="1">return string(b), nil</span>
+}
+
+// Загрузка номера заказа
+// POST /api/user/orders
+func (oh OrderHandler) LoadHandle() http.HandlerFunc <span class="cov8" title="1">{
+        return func(rw http.ResponseWriter, req *http.Request) </span><span class="cov8" title="1">{
+                userID, err := userIDFromReq(req)
+                if err != nil </span><span class="cov8" title="1">{
+                        oh.log.Error("parse req", "err", err)
+                        http.Error(rw, err.Error(), statusInternal)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">numberStr, err := parseBodyToString(req.Body)
+                if err != nil </span><span class="cov8" title="1">{
+                        oh.log.Error("parse Body", "err", err)
+                        http.Error(rw, err.Error(), statusInternal)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">number, err := order.ParseNumber(numberStr)
+                if err != nil </span><span class="cov8" title="1">{
+                        oh.log.Error("parse Number", "err", err)
+                        http.Error(rw, err.Error(), statusUnprocess)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">if err := oh.saveService.LoadOrder(req.Context(), userID, number); err != nil </span><span class="cov8" title="1">{
+                        var errFieldCon errFieldConflict
+                        if errors.As(err, &amp;errFieldCon) </span><span class="cov8" title="1">{
+                                data := errFieldCon.Data()
+                                if _, ok := data.(order.Number); ok </span><span class="cov8" title="1">{
+                                        oh.log.Error("srv conflict Number", "err", errFieldCon.Error())
+                                        http.Error(rw, err.Error(), statusUnprocess)
+                                        return
+                                }</span>
+
+                                <span class="cov8" title="1">if _, ok := data.(user.ID); ok </span><span class="cov8" title="1">{
+                                        oh.log.Error("srv conflict userID", "err", errFieldCon.Error())
+                                        http.Error(rw, errFieldCon.Error(), statusConflict)
+                                        return
+                                }</span>
+
+                                <span class="cov8" title="1">if _, ok := data.(order.ID); ok </span><span class="cov8" title="1">{
+                                        oh.log.Debug("srv number exist", "msg", errFieldCon.Error())
+                                        rw.WriteHeader(statusOK)
+                                        return
+                                }</span>
+
+                        }
+
+                        <span class="cov8" title="1">oh.log.Error("srv", "err", err)
+                        http.Error(rw, err.Error(), statusInternal)
+                        return</span>
+                }
+
+                <span class="cov8" title="1">rw.WriteHeader(statusAccepted)</span>
+        }
+}
+
+// Запрос на списание средств
+// POST /api/user/balance/withdraw
+func (oh OrderHandler) Withdraw() http.HandlerFunc <span class="cov8" title="1">{
+        return func(rw http.ResponseWriter, req *http.Request) </span><span class="cov8" title="1">{
+                witdrawReq := struct {
+                        Order string  `json:"order"`
+                        Sum   float64 `json:"sum"`
+                }{}
+
+                if err := parseBody(req.Body, &amp;witdrawReq); err != nil </span><span class="cov8" title="1">{
+                        http.Error(rw, err.Error(), statusInternal)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">userID, err := userIDFromReq(req)
+                if err != nil </span><span class="cov8" title="1">{
+                        http.Error(rw, err.Error(), statusInternal)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">number, err := order.ParseNumber(witdrawReq.Order)
+                if err != nil </span><span class="cov8" title="1">{
+                        http.Error(rw, err.Error(), statusUnprocess)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">acc := order.NewAccrual(witdrawReq.Sum)
+
+                order := order.New(
+                        order.NewID(),
+                        userID,
+                        order.NewInfo(
+                                number,
+                                order.StatusWithdraw,
+                                acc,
+                        ),
+                )
+
+                if err := oh.saveService.Withdraw(req.Context(), order); err != nil </span><span class="cov8" title="1">{
+                        var errWithdraw errWithdraw
+                        if errors.As(err, &amp;errWithdraw) &amp;&amp; errWithdraw.IsSuccessful() </span><span class="cov8" title="1">{
+                                http.Error(rw, errWithdraw.Error(), statusPaymentReq)
+                                return
+                        }</span>
+
+                        <span class="cov8" title="1">http.Error(rw, err.Error(), statusInternal)</span>
+                }
+        }
+}
+
+// Получение списка загруженных номеров заказов
+// GET /api/user/orders
+func (oh OrderHandler) GetOrders() http.HandlerFunc <span class="cov8" title="1">{
+        return func(rw http.ResponseWriter, req *http.Request) </span><span class="cov8" title="1">{
+                userID, err := userIDFromReq(req)
+                if err != nil </span><span class="cov8" title="1">{
+                        http.Error(rw, err.Error(), statusInternal)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">orders, err := oh.getService.GetOrders(req.Context(), userID)
+                if err != nil </span><span class="cov8" title="1">{
+                        http.Error(rw, err.Error(), statusInternal)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">if len(orders) == 0 </span><span class="cov8" title="1">{
+                        rw.WriteHeader(statusNoContent)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">type orderResp struct {
+                        Number  string    `json:"number"`
+                        Status  string    `json:"status"`
+                        Accrual *float64  `json:"accrual,omitempty"`
+                        Upload  time.Time `json:"uploaded_at"`
+                }
+
+                ordersResp := make([]orderResp, len(orders))
+
+                fn := func(accPtr *order.Accrual) *float64 </span><span class="cov8" title="1">{
+                        if accPtr == nil </span><span class="cov8" title="1">{
+                                return nil
+                        }</span>
+
+                        <span class="cov8" title="1">acc := accPtr.ToFloat()
+                        return &amp;acc</span>
+                }
+
+                <span class="cov8" title="1">for i := range orders </span><span class="cov8" title="1">{
+                        oi := orders[i].Info()
+                        ordersResp[i] = orderResp{
+                                Number:  oi.Number().String(),
+                                Status:  oi.Status().String(),
+                                Accrual: fn(oi.Accrual()),
+                                Upload:  oi.Date(),
+                        }
+                }</span>
+
+                <span class="cov8" title="1">rw.Header().Set("Content-Type", "application/json")
+                rw.WriteHeader(http.StatusOK)
+                if err := json.NewEncoder(rw).Encode(ordersResp); err != nil </span><span class="cov0" title="0">{
+                        http.Error(rw, err.Error(), statusInternal)
+                }</span>
+        }
+}
+
+// Получение информации о выводе средств
+// GET /api/user/withdrawals
+func (oh OrderHandler) Withdrawals() http.HandlerFunc <span class="cov8" title="1">{
+        return func(rw http.ResponseWriter, req *http.Request) </span><span class="cov8" title="1">{
+                userID, err := userIDFromReq(req)
+                if err != nil </span><span class="cov8" title="1">{
+                        http.Error(rw, err.Error(), statusInternal)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">type orderResp struct {
+                        Order string    `json:"order"`
+                        Sum   float64   `json:"sum"`
+                        Date  time.Time `json:"processed_at"`
+                }
+
+                orders, err := oh.getService.Withdrawals(req.Context(), userID)
+                if err != nil </span><span class="cov8" title="1">{
+                        http.Error(rw, err.Error(), statusInternal)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">if len(orders) == 0 </span><span class="cov8" title="1">{
+                        http.Error(rw, "нет списаний", statusNoContent)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">ordersResp := make([]orderResp, len(orders))
+                for i := range orders </span><span class="cov8" title="1">{
+                        oi := orders[i].Info()
+                        ordersResp[i] = orderResp{
+                                Order: oi.Number().String(),
+                                Sum:   oi.Accrual().ToFloat(),
+                                Date:  oi.Date(),
+                        }
+                }</span>
+
+                <span class="cov8" title="1">rw.Header().Set("Content-Type", "application/json")
+                if err := json.NewEncoder(rw).Encode(ordersResp); err != nil </span><span class="cov0" title="0">{
+                        http.Error(rw, err.Error(), statusInternal)
+                }</span>
+        }
+}
+
+// Получение текущего баланса пользователя
+// GET /api/user/balance
+func (oh OrderHandler) Balance() http.HandlerFunc <span class="cov8" title="1">{
+        return func(rw http.ResponseWriter, req *http.Request) </span><span class="cov8" title="1">{
+                userID, err := userIDFromReq(req)
+                if err != nil </span><span class="cov8" title="1">{
+                        http.Error(rw, err.Error(), statusInternal)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">type balanceResp struct {
+                        Current   float64 `json:"current"`
+                        Withdrawn float64 `json:"withdrawn"`
+                }
+
+                balance, err := oh.getService.Balance(req.Context(), userID)
+                if err != nil </span><span class="cov8" title="1">{
+                        http.Error(rw, err.Error(), statusInternal)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">blnResp := balanceResp{
+                        Current:   balance.Current().ToFloat(),
+                        Withdrawn: balance.Withdraw().ToFloat(),
+                }
+
+                rw.Header().Set("Content-Type", "application/json")
+                if err := json.NewEncoder(rw).Encode(blnResp); err != nil </span><span class="cov0" title="0">{
+                        http.Error(rw, err.Error(), statusInternal)
+                }</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file4" style="display: none">package handler
+
+import (
+        "context"
+        "errors"
+        "log/slog"
+        "net/http"
+
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/user"
+)
+
+// USER
+type authService interface {
+        Register(context.Context, user.AuthUser) (user.User, error)
+        Login(context.Context, user.AuthUser) (user.User, error)
+}
+
+type UserHandler struct {
+        authService authService
+        fnSet       func(http.ResponseWriter, string) // header or cockie
+        log         *slog.Logger
+}
+
+func NewUserHandler(authService authService, fnSet func(http.ResponseWriter, string), log *slog.Logger) UserHandler <span class="cov8" title="1">{
+        return UserHandler{authService: authService, fnSet: fnSet, log: log}
+}</span>
+
+type userReq struct {
+        Login string `json:"login"`
+        Pass  string `json:"password"`
+}
+
+func (ur userReq) Valid() bool <span class="cov8" title="1">{ return ur.Login != "" || ur.Pass != "" }</span>
+
+func (ur userReq) toAuthUser() user.AuthUser <span class="cov8" title="1">{
+        return user.NewAuthUser(user.Login(ur.Login), user.Password(ur.Pass))
+}</span>
+
+// Регистрация пользователя
+// POST /api/user/register
+func (uh UserHandler) Register() http.HandlerFunc <span class="cov8" title="1">{
+        return func(rw http.ResponseWriter, req *http.Request) </span><span class="cov8" title="1">{
+                var userReq userReq
+
+                if err := parseBody(req.Body, &amp;userReq); err != nil </span><span class="cov8" title="1">{
+                        uh.log.Error("parse Body", "err", err)
+                        http.Error(rw, err.Error(), statusBadReq)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">if !userReq.Valid() </span><span class="cov8" title="1">{
+                        uh.log.Error("userReq not valid", "req", userReq)
+                        http.Error(rw, "userReq not valid", statusBadReq)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">userFromDB, err := uh.authService.Register(req.Context(), userReq.toAuthUser())
+                if err != nil </span><span class="cov8" title="1">{
+                        var errFieldConf errFieldConflict
+                        if errors.As(err, &amp;errFieldConf) </span><span class="cov8" title="1">{
+                                uh.log.Error(errFieldConf.Error())
+                                http.Error(rw, errFieldConf.Error(), statusConflict)
+                                return
+                        }</span>
+
+                        <span class="cov8" title="1">uh.log.Error("err service", "err", err)
+                        http.Error(rw, err.Error(), statusInternal)
+                        return</span>
+                }
+
+                <span class="cov8" title="1">uh.fnSet(rw, userFromDB.ID().String())</span>
+        }
+}
+
+// Аутентификация пользователя
+// POST /api/user/login
+func (uh UserHandler) Login() http.HandlerFunc <span class="cov8" title="1">{
+        return func(rw http.ResponseWriter, req *http.Request) </span><span class="cov8" title="1">{
+                var userReq userReq
+                if err := parseBody(req.Body, &amp;userReq); err != nil </span><span class="cov8" title="1">{
+                        uh.log.Error("parse Body", "err", err)
+                        http.Error(rw, err.Error(), statusInternal)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">if !userReq.Valid() </span><span class="cov8" title="1">{
+                        uh.log.Error("userReq not valid", "req", userReq)
+                        http.Error(rw, "userReq not valid", statusBadReq)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">userFromDB, err := uh.authService.Login(req.Context(), userReq.toAuthUser())
+                if err != nil </span><span class="cov8" title="1">{
+                        uh.log.Error("loginSrv", "err", err)
+                        http.Error(rw, err.Error(), statusUnauth)
+                        return
+                }</span>
+
+                <span class="cov8" title="1">uh.fnSet(rw, userFromDB.ID().String())</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file5" style="display: none">package http
+
+import (
+        "net/http"
+)
+
+type middle func(http.Handler) http.Handler
+
+type Router interface {
+        Handle(string, http.Handler)
+        Group(string, func(r Router))
+        Use(func(http.Handler) http.Handler)
+}
+
+type route struct {
+        mux     *http.ServeMux
+        pattern string
+        middles []func(http.Handler) http.Handler
+}
+
+func NewRouter() *route <span class="cov0" title="0">{
+        return &amp;route{
+                mux:     http.NewServeMux(),
+                middles: make([]func(http.Handler) http.Handler, 0),
+        }
+}</span>
+
+func (r *route) Handle(pattern string, handler http.Handler) <span class="cov0" title="0">{
+        for i := range r.middles </span><span class="cov0" title="0">{
+                handler = r.middles[len(r.middles)-1-i](handler)
+        }</span>
+        <span class="cov0" title="0">r.mux.Handle(r.pattern+pattern, handler)</span>
+}
+
+func (r *route) Group(pattern string, fn func(r Router)) <span class="cov0" title="0">{
+        if r.pattern != "" </span><span class="cov0" title="0">{
+                pattern = pattern[1:]
+        }</span>
+        <span class="cov0" title="0">r.pattern += pattern
+        fn(r)</span>
+}
+
+func (r *route) Use(middle func(http.Handler) http.Handler) <span class="cov0" title="0">{
+        r.middles = append(r.middles, middle)
+}</span>
+</pre>
+		
+		<pre class="file" id="file6" style="display: none">package http
+
+import (
+        "context"
+        "net/http"
+)
+
+type server struct {
+        server *http.Server
+}
+
+type ServerConfig struct {
+        Addr string
+}
+
+func NewServer(cfg ServerConfig, route route) server <span class="cov0" title="0">{
+        return server{
+                server: &amp;http.Server{
+                        Addr:    cfg.Addr,
+                        Handler: route.mux,
+                },
+        }
+}</span>
+
+func (s server) Start() error                   <span class="cov0" title="0">{ return s.server.ListenAndServe() }</span>
+func (s server) Stop(ctx context.Context) error <span class="cov0" title="0">{ return s.server.Shutdown(ctx) }</span>
+func (s server) RegisterShutdown(fn func())     <span class="cov0" title="0">{ s.server.RegisterOnShutdown(fn) }</span>
+</pre>
+		
+		<pre class="file" id="file7" style="display: none">package order
+
+type Accrual uint64
+
+func NewAccrual(acc float64) *Accrual <span class="cov8" title="1">{
+        a := Accrual(acc * 100)
+        return &amp;a
+}</span>
+
+func ParseAccrual(accFloat *float64) *Accrual <span class="cov0" title="0">{
+        if accFloat == nil </span><span class="cov0" title="0">{
+                return nil
+        }</span>
+
+        <span class="cov0" title="0">acc := NewAccrual(*accFloat)
+        return acc</span>
+}
+
+func (acc Accrual) Add(accr *Accrual) Accrual <span class="cov0" title="0">{
+        if accr != nil </span><span class="cov0" title="0">{
+                acc += *accr
+        }</span>
+
+        <span class="cov0" title="0">return acc</span>
+}
+
+func (acc Accrual) ToFloat() float64 <span class="cov8" title="1">{ return float64(acc) / 100 }</span>
+</pre>
+		
+		<pre class="file" id="file8" style="display: none">package order
+
+import "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/user"
+
+type Balance struct {
+        userID    user.ID
+        current   Accrual
+        withdrawn Accrual
+}
+
+func NewBalance(userID user.ID, current, withdrawn Accrual) Balance <span class="cov8" title="1">{
+        return Balance{
+                userID:    userID,
+                current:   current,
+                withdrawn: withdrawn,
+        }
+}</span>
+
+func (b *Balance) Current() Accrual  <span class="cov8" title="1">{ return b.current }</span>
+func (b *Balance) Withdraw() Accrual <span class="cov8" title="1">{ return b.withdrawn }</span>
+
+// func (b *Balance) AddCurrent(acc *Accrual)  { b.current = b.current.Add(acc) }
+// func (b *Balance) AddWithdraw(acc *Accrual) { b.withdrawn = b.withdrawn.Add(acc) }
+</pre>
+		
+		<pre class="file" id="file9" style="display: none">package order
+
+import "github.com/google/uuid"
+
+type ID uuid.UUID
+
+func ParseID(val string) (ID, error) <span class="cov0" title="0">{
+        uid, err := uuid.Parse(val)
+        if err != nil </span><span class="cov0" title="0">{
+                return ID(uuid.Nil), err
+        }</span>
+        <span class="cov0" title="0">return ID(uid), nil</span>
+}
+
+func NewID() ID              <span class="cov8" title="1">{ return ID(uuid.New()) }</span>
+func (id ID) String() string <span class="cov0" title="0">{ return uuid.UUID(id).String() }</span>
+</pre>
+		
+		<pre class="file" id="file10" style="display: none">package order
+
+import "time"
+
+type Info struct {
+        number   Number
+        status   Status
+        accrual  *Accrual
+        uploaded time.Time
+}
+
+func ParseInfo(numberStr string, statusStr string, acc *float64, date time.Time) (Info, error) <span class="cov0" title="0">{
+        number, err := ParseNumber(numberStr)
+        if err != nil </span><span class="cov0" title="0">{
+                return Info{}, err
+        }</span>
+
+        <span class="cov0" title="0">return Info{
+                number:   number,
+                status:   ParseStatus(statusStr),
+                accrual:  ParseAccrual(acc),
+                uploaded: date,
+        }, nil</span>
+}
+
+func NewInfo(number Number, status Status, acc *Accrual) Info <span class="cov8" title="1">{
+        return Info{
+                number:   number,
+                status:   status,
+                accrual:  acc,
+                uploaded: time.Now(),
+        }
+}</span>
+
+func (i Info) new(newInfo Info) (Info, error) <span class="cov0" title="0">{
+        return Info{
+                number:   newInfo.number,
+                status:   newInfo.status,
+                accrual:  newInfo.accrual,
+                uploaded: newInfo.uploaded,
+        }, nil
+}</span>
+
+func (i Info) Accrual() *Accrual <span class="cov8" title="1">{ return i.accrual }</span>
+func (i Info) Status() Status    <span class="cov8" title="1">{ return i.status }</span>
+func (i Info) Number() Number    <span class="cov8" title="1">{ return i.number }</span>
+func (i Info) Date() time.Time   <span class="cov8" title="1">{ return i.uploaded }</span>
+</pre>
+		
+		<pre class="file" id="file11" style="display: none">package order
+
+import "strconv"
+
+type Number uint64
+
+func ParseNumber(numStr string) (Number, error) <span class="cov8" title="1">{
+        n, err := strconv.Atoi(numStr)
+        if err != nil </span><span class="cov8" title="1">{
+                return 0, err
+        }</span>
+
+        <span class="cov8" title="1">return Number(n), nil</span>
+}
+
+func (n Number) String() string <span class="cov8" title="1">{ return strconv.Itoa(int(n)) }</span>
+</pre>
+		
+		<pre class="file" id="file12" style="display: none">package order
+
+import "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/user"
+
+type Order struct {
+        id        ID
+        userID    user.ID
+        orderInfo Info
+}
+
+func New(id ID, userID user.ID, orderInfo Info) Order <span class="cov8" title="1">{
+        return Order{
+                id:        id,
+                userID:    userID,
+                orderInfo: orderInfo,
+        }
+}</span>
+
+func (o *Order) UpdateInfo(newInfo Info) error <span class="cov0" title="0">{
+        infoOrder, err := o.orderInfo.new(newInfo)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov0" title="0">o.orderInfo = infoOrder
+
+        return nil</span>
+}
+
+func (o Order) ID() ID          <span class="cov0" title="0">{ return o.id }</span>
+func (o Order) Info() Info      <span class="cov8" title="1">{ return o.orderInfo }</span>
+func (o Order) UserID() user.ID <span class="cov0" title="0">{ return o.userID }</span>
+</pre>
+		
+		<pre class="file" id="file13" style="display: none">package order
+
+type Status uint8
+
+const (
+        StatusNotSupport Status = iota // вместо ошибки
+        StatusNew                      // NEW                                                                //                db
+        StatusRegistered               // REGISTERED                                                //acc
+        StatusProcessing               // PROCESSING                                                //acc        db
+        StatusInvalid                  // INVALID                // окончательный        //acc        db
+        StatusProcessed                // PROCESSED                // окончательный        //acc        db
+        StatusWithdraw                 // withdrawal        // окончательный
+)
+
+func supportStatus() [7]string <span class="cov8" title="1">{
+        return [7]string{
+                "status NOT support",
+                "NEW",
+                "REGISTERED",
+                "PROCESSING",
+                "INVALID",
+                "PROCESSED",
+                "withdrawal",
+        }
+}</span>
+
+func ParseStatus(status string) Status <span class="cov0" title="0">{
+        statuses := supportStatus()
+        for i := range statuses </span><span class="cov0" title="0">{
+                if status == statuses[i] </span><span class="cov0" title="0">{
+                        return Status(i)
+                }</span>
+        }
+        <span class="cov0" title="0">return StatusNew</span>
+}
+
+func (s Status) String() string <span class="cov8" title="1">{ return supportStatus()[s] }</span>
+</pre>
+		
+		<pre class="file" id="file14" style="display: none">package user
+
+// User для аутентификации
+type AuthUser struct {
+        login    Login
+        password Password
+}
+
+func NewAuthUser(login Login, pass Password) AuthUser <span class="cov8" title="1">{
+        return AuthUser{
+                login:    login,
+                password: pass,
+        }
+}</span>
+
+func (au AuthUser) Login() Login   <span class="cov8" title="1">{ return au.login }</span>
+func (au AuthUser) Pass() Password <span class="cov8" title="1">{ return au.password }</span>
+</pre>
+		
+		<pre class="file" id="file15" style="display: none">package user
+
+import (
+        "fmt"
+
+        "github.com/google/uuid"
+)
+
+type ID uuid.UUID
+
+func NewID() ID  <span class="cov8" title="1">{ return ID(uuid.New()) }</span>
+func NillID() ID <span class="cov8" title="1">{ return ID(uuid.Nil) }</span>
+
+func ParseID(val string) (ID, error) <span class="cov0" title="0">{
+        uid, err := uuid.Parse(val)
+        if err != nil </span><span class="cov0" title="0">{
+                return ID(uuid.Nil), fmt.Errorf("ParseID [%s]: %w", val, err)
+        }</span>
+
+        <span class="cov0" title="0">return ID(uid), nil</span>
+}
+
+func (id ID) String() string <span class="cov8" title="1">{ return uuid.UUID(id).String() }</span>
+</pre>
+		
+		<pre class="file" id="file16" style="display: none">package user
+
+import (
+        "errors"
+        "fmt"
+)
+
+type Login string
+type Password string
+
+type User struct {
+        id    ID
+        login Login
+        hash  string
+}
+
+func (u User) Valid() error <span class="cov8" title="1">{
+        if u.login == "" </span><span class="cov0" title="0">{
+                return errors.New("login empty")
+        }</span>
+
+        <span class="cov8" title="1">if u.id == NillID() </span><span class="cov0" title="0">{
+                return errors.New("id empty")
+        }</span>
+
+        <span class="cov8" title="1">if u.hash == "" </span><span class="cov0" title="0">{
+                return errors.New("hash empty")
+        }</span>
+
+        <span class="cov8" title="1">return nil</span>
+}
+
+func Parse(idStr string, login string, hash string) (User, error) <span class="cov0" title="0">{
+        id, err := ParseID(idStr)
+        if err != nil </span><span class="cov0" title="0">{
+                return User{}, fmt.Errorf("New: %w", err)
+        }</span>
+
+        <span class="cov0" title="0">return User{
+                id:    id,
+                login: Login(login),
+                hash:  hash,
+        }, nil</span>
+}
+
+func New(login Login, hash string) User <span class="cov8" title="1">{
+        return User{
+                id:    NewID(),
+                login: login,
+                hash:  hash,
+        }
+}</span>
+
+func (u User) ID() ID        <span class="cov8" title="1">{ return u.id }</span>
+func (u User) Login() string <span class="cov8" title="1">{ return string(u.login) }</span>
+func (u User) Hash() string  <span class="cov8" title="1">{ return string(u.hash) }</span>
+</pre>
+		
+		<pre class="file" id="file17" style="display: none">package middle
+
+import (
+        "log/slog"
+        "net/http"
+)
+
+type responseData struct {
+        Status int `json:"httpStatus"`
+        size   int
+}
+
+func newResponceData() *responseData <span class="cov0" title="0">{
+        return &amp;responseData{
+                Status: http.StatusOK,
+        }
+}</span>
+
+type requestData struct {
+        URI         string `json:"uri"`
+        Method      string `json:"method"`
+        ContentType string `json:"content-type"`
+}
+
+type loggingResponseWriter struct {
+        http.ResponseWriter
+        responseData *responseData
+}
+
+func newLoggingResponseWriter(rw http.ResponseWriter, resData *responseData) *loggingResponseWriter <span class="cov0" title="0">{
+        return &amp;loggingResponseWriter{
+                ResponseWriter: rw,
+                responseData:   resData,
+        }
+}</span>
+
+func (r *loggingResponseWriter) Write(b []byte) (int, error) <span class="cov0" title="0">{
+        size, err := r.ResponseWriter.Write(b)
+        r.responseData.size += size
+
+        return size, err
+}</span>
+
+func (r *loggingResponseWriter) WriteHeader(statusCode int) <span class="cov0" title="0">{
+        r.responseData.Status = statusCode
+        r.ResponseWriter.WriteHeader(statusCode)
+}</span>
+
+func Logger(log *slog.Logger) func(http.Handler) http.Handler <span class="cov0" title="0">{
+        return func(next http.Handler) http.Handler </span><span class="cov0" title="0">{
+                return http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) </span><span class="cov0" title="0">{
+                        reqData := &amp;requestData{
+                                URI:         req.URL.String(),
+                                Method:      req.Method,
+                                ContentType: req.Header.Get("Content-Type"),
+                        }
+
+                        log.With("request", reqData)
+
+                        resData := newResponceData()
+                        defer func() </span><span class="cov0" title="0">{
+                                log.Info("-resp-", "respData", resData, "reqData", reqData)
+                        }</span>()
+
+                        <span class="cov0" title="0">lmw := newLoggingResponseWriter(rw, resData)
+
+                        next.ServeHTTP(lmw, req)</span>
+                })
+        }
+}
+</pre>
+		
+		<pre class="file" id="file18" style="display: none">package middle
+
+import (
+        "context"
+        "net/http"
+
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/user"
+)
+
+const appJSON string = "application/json"
+const textPlain string = "text/plain"
+
+type middle func(http.Handler) http.Handler
+
+type Select struct {
+        Get  http.Handler
+        Post http.Handler
+}
+
+func (s Select) ServeHTTP(rw http.ResponseWriter, req *http.Request) <span class="cov0" title="0">{
+        switch </span>{
+        case req.Method == http.MethodGet &amp;&amp; s.Get != nil:<span class="cov0" title="0">
+                s.Get.ServeHTTP(rw, req)</span>
+        case req.Method == http.MethodPost &amp;&amp; s.Post != nil:<span class="cov0" title="0">
+                s.Post.ServeHTTP(rw, req)</span>
+        default:<span class="cov0" title="0">
+                rw.WriteHeader(http.StatusMethodNotAllowed)</span>
+        }
+}
+
+func UseHandler(use http.Handler, arrMiddle ...middle) http.Handler <span class="cov0" title="0">{
+        for i := range arrMiddle </span><span class="cov0" title="0">{
+                use = arrMiddle[len(arrMiddle)-1-i](use)
+        }</span>
+        <span class="cov0" title="0">return use</span>
+}
+
+func Use(use http.HandlerFunc, arrMiddle ...middle) http.Handler <span class="cov0" title="0">{
+        for i := range arrMiddle </span><span class="cov0" title="0">{
+                use = arrMiddle[len(arrMiddle)-1-i](use).ServeHTTP
+        }</span>
+        <span class="cov0" title="0">return use</span>
+}
+
+func Get() middle       <span class="cov0" title="0">{ return method(http.MethodGet) }</span>
+func Post() middle      <span class="cov0" title="0">{ return method(http.MethodPost) }</span>
+func AppJSON() middle   <span class="cov0" title="0">{ return contentType(appJSON) }</span>
+func TextPlain() middle <span class="cov0" title="0">{ return contentType(textPlain) }</span>
+
+func method(method string) func(http.Handler) http.Handler <span class="cov0" title="0">{
+        return func(next http.Handler) http.Handler </span><span class="cov0" title="0">{
+                return http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) </span><span class="cov0" title="0">{
+                        if req.Method != method </span><span class="cov0" title="0">{
+                                rw.WriteHeader(http.StatusMethodNotAllowed)
+                                return
+                        }</span>
+                        <span class="cov0" title="0">next.ServeHTTP(rw, req)</span>
+                })
+        }
+}
+
+func contentType(contentType string) func(http.Handler) http.Handler <span class="cov0" title="0">{
+        return func(next http.Handler) http.Handler </span><span class="cov0" title="0">{
+                return http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) </span><span class="cov0" title="0">{
+                        if req.Header.Get("Content-Type") != contentType </span><span class="cov0" title="0">{
+                                rw.WriteHeader(http.StatusUnsupportedMediaType)
+                                return
+                        }</span>
+                        <span class="cov0" title="0">next.ServeHTTP(rw, req)</span>
+                })
+        }
+}
+
+func AuthByFunc(ctxKey any, fnCheck func(*http.Request) (string, error)) func(http.Handler) http.Handler <span class="cov0" title="0">{
+        return func(next http.Handler) http.Handler </span><span class="cov0" title="0">{
+                return http.HandlerFunc(
+                        func(rw http.ResponseWriter, req *http.Request) </span><span class="cov0" title="0">{
+                                userIDVal, err := fnCheck(req)
+                                if err != nil </span><span class="cov0" title="0">{
+                                        http.Error(rw, "нет userIDval", http.StatusUnauthorized)
+                                        return
+                                }</span>
+
+                                <span class="cov0" title="0">userID, err := user.ParseID(userIDVal)
+                                if err != nil </span><span class="cov0" title="0">{
+                                        http.Error(rw, "parse userIDval", http.StatusUnauthorized)
+                                        return
+                                }</span>
+
+                                <span class="cov0" title="0">ctx := context.WithValue(req.Context(), ctxKey, userID)
+
+                                next.ServeHTTP(rw, req.WithContext(ctx))</span>
+                        },
+                )
+        }
+}
+</pre>
+		
+		<pre class="file" id="file19" style="display: none">package bcrypt
+
+import "golang.org/x/crypto/bcrypt"
+
+func Hash(pass []byte) ([]byte, error) <span class="cov0" title="0">{
+        return bcrypt.GenerateFromPassword(pass, bcrypt.DefaultCost)
+
+}</span>
+
+func Compare(hashPass, pass []byte) error <span class="cov0" title="0">{
+        return bcrypt.CompareHashAndPassword(hashPass, pass)
+}</span>
+</pre>
+		
+		<pre class="file" id="file20" style="display: none">package hash
+
+import "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/user"
+
+type hashe struct {
+        fnHash   func([]byte) ([]byte, error)
+        fnEquals func([]byte, []byte) error
+}
+
+func NewHashe(fnHash func([]byte) ([]byte, error), fnEquals func([]byte, []byte) error) hashe <span class="cov0" title="0">{
+        return hashe{fnHash: fnHash, fnEquals: fnEquals}
+}</span>
+
+func (hf hashe) Hash(pass user.Password) (string, error) <span class="cov0" title="0">{
+        hashPass, err := hf.fnHash([]byte(pass))
+        if err != nil </span><span class="cov0" title="0">{
+                return "", err
+        }</span>
+        <span class="cov0" title="0">return string(hashPass), nil</span>
+}
+
+func (hf hashe) Equals(hashPass string, pass user.Password) bool <span class="cov0" title="0">{
+        if err := hf.fnEquals([]byte(hashPass), []byte(pass)); err != nil </span><span class="cov0" title="0">{
+                return false
+        }</span>
+        <span class="cov0" title="0">return true</span>
+}
+</pre>
+		
+		<pre class="file" id="file21" style="display: none">package accrual
+
+import (
+        "context"
+        "encoding/json"
+        "fmt"
+        "net/http"
+        "net/url"
+        "strconv"
+        "strings"
+
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order"
+)
+
+const defaultRetryAfter int = 8
+
+type errRetryable struct {
+        error
+        after int
+}
+
+func (e errRetryable) Retry() int <span class="cov0" title="0">{ return e.after }</span>
+
+type Repo struct {
+        accURL *url.URL
+        client *http.Client
+}
+
+type resp struct {
+        Order   string   `json:"order"`
+        Status  string   `json:"status"`
+        Accrual *float64 `json:"accrual,omitempty"`
+}
+
+func New(accURL *url.URL) *Repo <span class="cov0" title="0">{
+        return &amp;Repo{
+                client: http.DefaultClient,
+                accURL: accURL,
+        }
+}</span>
+
+func correctStatus(status order.Status) order.Status <span class="cov0" title="0">{
+        if status == order.StatusRegistered </span><span class="cov0" title="0">{
+                return order.StatusNew
+        }</span>
+        <span class="cov0" title="0">return status</span>
+}
+
+func (repo *Repo) Load(ctx context.Context, number order.Number) (order.Info, error) <span class="cov0" title="0">{
+        url := fmt.Sprintf(
+                "http://%s/api/orders/%s",
+                strings.TrimPrefix(repo.accURL.String(), "http://"), number.String())
+
+        req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, http.NoBody)
+        if err != nil </span><span class="cov0" title="0">{
+                return order.Info{}, fmt.Errorf("load build req: %w", err)
+        }</span>
+
+        <span class="cov0" title="0">res, err := repo.client.Do(req)
+        if err != nil </span><span class="cov0" title="0">{
+                return order.Info{}, fmt.Errorf("load exec req: %w", err)
+        }</span>
+        <span class="cov0" title="0">defer res.Body.Close()
+
+        switch res.StatusCode </span>{
+        case http.StatusOK:<span class="cov0" title="0"> // 200
+                var orderResp resp
+                if err := json.NewDecoder(res.Body).Decode(&amp;orderResp); err != nil </span><span class="cov0" title="0">{
+                        return order.Info{}, fmt.Errorf("load decode body: %w", err)
+                }</span>
+
+                <span class="cov0" title="0">return order.NewInfo(
+                        number,
+                        correctStatus(order.ParseStatus(orderResp.Status)),
+                        order.ParseAccrual(orderResp.Accrual),
+                ), nil</span>
+
+        case http.StatusNoContent:<span class="cov0" title="0"> // 204
+                return order.NewInfo(
+                        number,
+                        order.StatusNew,
+                        nil,
+                ), nil</span> // "заказ не зарегистрирован в системе расчёта"
+
+        case http.StatusTooManyRequests:<span class="cov0" title="0"> // 429
+                retry := defaultRetryAfter
+                if retryVal := req.Header.Get("Retry-After"); retryVal != "" </span><span class="cov0" title="0">{
+                        var err error
+                        retry, err = strconv.Atoi(retryVal)
+                        if err != nil </span><span class="cov0" title="0">{
+                                return order.Info{}, err
+                        }</span>
+                }
+
+                <span class="cov0" title="0">return order.Info{}, errRetryable{
+                        error: fmt.Errorf("превышено количество запросов к сервису"),
+                        after: retry,
+                }</span>
+
+        case http.StatusInternalServerError:<span class="cov0" title="0"> // 500
+                return order.Info{}, errRetryable{
+                        error: fmt.Errorf("внутренняя ошибка сервера accrual"),
+                        after: defaultRetryAfter,
+                }</span>
+
+        default:<span class="cov0" title="0">
+                return order.Info{}, fmt.Errorf("statusCode не обработан")</span>
+        }
+}
+</pre>
+		
+		<pre class="file" id="file22" style="display: none">package fakeaccrual
+
+import (
+        "context"
+        "math/rand"
+        "slices"
+        "time"
+
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order"
+)
+
+func randInt(min, max int) int <span class="cov0" title="0">{
+        r := rand.New(
+                rand.NewSource(
+                        time.Now().UnixNano(),
+                ),
+        )
+
+        return min + 1 + r.Intn(max-min)
+}</span>
+
+func randFloat(min, max float64) float64 <span class="cov0" title="0">{
+        r := rand.New(
+                rand.NewSource(
+                        time.Now().UnixNano(),
+                ),
+        )
+        return min + r.Float64()*(max-min)
+}</span>
+
+func finalStatuses() []order.Status <span class="cov0" title="0">{
+        return []order.Status{
+                //order.StatusInvalid,
+                order.StatusProcessed,
+        }
+}</span>
+
+type fakeAccrual struct{}
+
+func (fa fakeAccrual) Load(_ context.Context, number order.Number) (order.Info, error) <span class="cov0" title="0">{
+        var accrual *order.Accrual
+
+        status := order.Status(randInt(int(order.StatusRegistered), int(order.StatusProcessed)))
+
+        if slices.Contains(finalStatuses(), status) </span><span class="cov0" title="0">{
+                accrual = order.NewAccrual(randFloat(1, 100))
+        }</span>
+
+        <span class="cov0" title="0">return order.NewInfo(number, status, accrual), nil</span>
+}
+
+func (fa fakeAccrual) Name() string <span class="cov0" title="0">{ return "fake Accraul" }</span>
+</pre>
+		
+		<pre class="file" id="file23" style="display: none">package postgres
+
+import (
+        "context"
+        "errors"
+        "fmt"
+        "time"
+
+        "database/sql"
+
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order"
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/user"
+        "github.com/lib/pq"
+)
+
+type orderDB struct {
+        orderID string
+        userID  string
+        number  string
+        status  string
+        acc     *float64
+        date    time.Time
+}
+
+func (o orderDB) order() (order.Order, error) <span class="cov0" title="0">{
+        var (
+                info    order.Info
+                orderID order.ID
+                userID  user.ID
+                err     error
+        )
+
+        info, err = order.ParseInfo(o.number, o.status, o.acc, o.date)
+        if err != nil </span><span class="cov0" title="0">{
+                return order.Order{}, err
+        }</span>
+
+        <span class="cov0" title="0">orderID, err = order.ParseID(o.orderID)
+        if err != nil </span><span class="cov0" title="0">{
+                return order.Order{}, err
+        }</span>
+
+        <span class="cov0" title="0">userID, err = user.ParseID(o.userID)
+        if err != nil </span><span class="cov0" title="0">{
+                return order.Order{}, err
+        }</span>
+
+        <span class="cov0" title="0">return order.New(orderID, userID, info), nil</span>
+}
+
+type errFieldConflict struct {
+        data any
+        name string
+}
+
+func (e errFieldConflict) Data() any <span class="cov0" title="0">{ return e.data }</span>
+
+func (e errFieldConflict) Error() string <span class="cov0" title="0">{
+        return fmt.Sprintf("нарушение уникальности [%s]", e.name)
+}</span>
+
+type Config struct {
+        ConnDB string
+}
+
+type Postgres struct {
+        cfg *Config
+        db  *sql.DB
+}
+
+func New(cfg Config) *Postgres       <span class="cov0" title="0">{ return &amp;Postgres{cfg: &amp;cfg} }</span>
+func (store *Postgres) Stop() error  <span class="cov0" title="0">{ return store.db.Close() }</span>
+func (store *Postgres) Ping() error  <span class="cov0" title="0">{ return store.db.Ping() }</span>
+func (store *Postgres) Name() string <span class="cov0" title="0">{ return "postgres" }</span>
+
+func (store *Postgres) Start() error <span class="cov0" title="0">{
+        db, err := sql.Open("postgres", store.cfg.ConnDB)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov0" title="0">store.db = db
+
+        if err := store.createTable(); err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov0" title="0">return store.Ping()</span>
+}
+
+func (store *Postgres) createTable() error <span class="cov0" title="0">{
+        createTablesSQL := `
+CREATE TABLE IF NOT EXISTS auser (
+        user_id varchar(100) NOT NULL ,
+        login varchar(50) NOT NULL,
+        hash varchar(100) NOT NULL,
+        PRIMARY KEY (user_id),
+        UNIQUE(login)
+);
+
+CREATE TABLE IF NOT EXISTS ordr (
+        o_id varchar(100) NOT NULL,
+        user_id varchar(100) NOT NULL REFERENCES auser(user_id),
+        num bigint NOT NULL,
+        status varchar(20) NOT NULL,
+        upload TIMESTAMP default NULL,
+        PRIMARY KEY (o_id),
+        UNIQUE(num)
+);
+
+CREATE TABLE IF NOT EXISTS o_sum (
+        o_id varchar(100) NOT NULL REFERENCES ordr(o_id),
+        acc double precision NOT NULL
+);`
+
+        ctx := context.Background()
+        if _, err := store.db.ExecContext(ctx, createTablesSQL); err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov0" title="0">return nil</span>
+}
+
+// Сохранение юзера
+func (store *Postgres) SaveUser(ctx context.Context, userNew user.User) (user.User, error) <span class="cov0" title="0">{
+        registStmt := `
+INSERT INTO auser (user_id, login, hash) 
+VALUES ($1, $2, $3)
+ON CONFLICT(login) 
+DO UPDATE SET 
+login=EXCLUDED.login
+RETURNING user_id, login;`
+
+        var userIDStr string
+        var loginInDB string
+
+        if err := store.db.QueryRowContext(ctx,
+                registStmt,
+                userNew.ID().String(),
+                userNew.Login(),
+                userNew.Hash(),
+        ).Scan(
+                &amp;userIDStr,
+                &amp;loginInDB,
+        ); err != nil </span><span class="cov0" title="0">{
+                return user.User{}, err
+        }</span>
+
+        <span class="cov0" title="0">if userIDStr != userNew.ID().String() </span><span class="cov0" title="0">{
+                return user.User{}, errFieldConflict{
+                        data: userNew.ID(),
+                        name: "-userID-",
+                }
+        }</span>
+
+        <span class="cov0" title="0">return user.Parse(userIDStr, string(userNew.Login()), userNew.Hash())</span>
+}
+
+// Возвращает юзера по логину.
+func (store *Postgres) UserByLogin(ctx context.Context, userLogin user.Login) (user.User, error) <span class="cov0" title="0">{
+        loginStmt := `SELECT user_id, login, hash FROM auser WHERE login = $1;`
+
+        var (
+                userIDStr    string
+                userLoginStr string
+                userHash     string
+        )
+
+        args := []any{userLogin}
+
+        if err := store.db.QueryRowContext(ctx, loginStmt, args...).Scan(&amp;userIDStr, &amp;userLoginStr, &amp;userHash); err != nil </span><span class="cov0" title="0">{
+                if errors.Is(sql.ErrNoRows, err) </span><span class="cov0" title="0">{
+                        return user.User{}, nil
+                }</span>
+
+                <span class="cov0" title="0">return user.User{}, fmt.Errorf("exec stmt [%s] args [%v]: %w", loginStmt, args, err)</span>
+        }
+
+        <span class="cov0" title="0">usr, err := user.Parse(userIDStr, userLoginStr, userHash)
+        if err != nil </span><span class="cov0" title="0">{
+                return user.User{}, fmt.Errorf("postgres Login: user: %w", err)
+        }</span>
+
+        <span class="cov0" title="0">return usr, nil</span>
+}
+
+// Сохрание заказа. Возвращает ошибку errFieldConflict,
+// если заказ с таким номером уже существует
+func (store *Postgres) SaveOrder(ctx context.Context, ordr order.Order) error <span class="cov0" title="0">{
+        saveOrderStmt := `
+INSERT INTO ordr(o_id, user_id, num, status, upload)
+VALUES ($1, $2, $3, $4, $5)
+ON CONFLICT(num) 
+DO UPDATE SET 
+num=EXCLUDED.num
+RETURNING o_id, user_id, num;`
+
+        stmtSum := `
+INSERT INTO o_sum(o_id, acc)
+VALUES ($1, $2);`
+
+        var (
+                orderIDStr string
+                userIDStr  string
+                num        string
+        )
+
+        tx, err := store.db.BeginTx(ctx, nil)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov0" title="0">oi := ordr.Info()
+        if err := tx.QueryRowContext(
+                ctx,
+                saveOrderStmt,
+                ordr.ID().String(),
+                ordr.UserID().String(),
+                oi.Number().String(),
+                oi.Status().String(),
+                oi.Date(),
+        ).Scan(
+                &amp;orderIDStr,
+                &amp;userIDStr,
+                &amp;num,
+        ); err != nil </span><span class="cov0" title="0">{
+                tx.Rollback()
+                return err
+        }</span>
+
+        <span class="cov0" title="0">if userIDStr != ordr.UserID().String() </span><span class="cov0" title="0">{
+                tx.Rollback()
+                return errFieldConflict{data: ordr.UserID(), name: "-userID-"}
+        }</span>
+
+        // проверяем что база вернула только что добавленный заказ
+        <span class="cov0" title="0">if orderIDStr != ordr.ID().String() </span><span class="cov0" title="0">{
+                tx.Rollback()
+                return errFieldConflict{data: ordr.ID(), name: "-orderID-"}
+        }</span>
+
+        <span class="cov0" title="0">if oi.Accrual() == nil </span><span class="cov0" title="0">{
+                return tx.Commit()
+        }</span>
+
+        <span class="cov0" title="0">if _, err := tx.ExecContext(
+                ctx,
+                stmtSum,
+                ordr.ID().String(),
+                oi.Accrual().ToFloat(),
+        ); err != nil </span><span class="cov0" title="0">{
+                tx.Rollback()
+                return err
+        }</span>
+
+        <span class="cov0" title="0">return tx.Commit()</span>
+}
+
+func ordersRowsScan(rows *sql.Rows) ([]order.Order, error) <span class="cov0" title="0">{
+        var orderDB orderDB
+
+        var orders []order.Order
+
+        for rows.Next() </span><span class="cov0" title="0">{
+                if err := rows.Scan(
+                        &amp;orderDB.orderID,
+                        &amp;orderDB.userID,
+                        &amp;orderDB.number,
+                        &amp;orderDB.status,
+                        &amp;orderDB.acc,
+                        &amp;orderDB.date,
+                ); err != nil </span><span class="cov0" title="0">{
+                        return nil, err
+                }</span>
+
+                <span class="cov0" title="0">ordr, err := orderDB.order()
+                if err != nil </span><span class="cov0" title="0">{
+                        return nil, err
+                }</span>
+
+                <span class="cov0" title="0">orders = append(orders, ordr)</span>
+        }
+
+        <span class="cov0" title="0">return orders, nil</span>
+}
+
+func prepareAsRow(ctx context.Context, query string, fnStmt func(context.Context, string) (*sql.Stmt, error), args ...any) (*sql.Row, error) <span class="cov0" title="0">{
+        stmt, err := fnStmt(ctx, query)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, fmt.Errorf("prepare stmt: %w", err)
+        }</span>
+
+        <span class="cov0" title="0">return stmt.QueryRowContext(ctx, args...), nil</span>
+}
+
+func (store *Postgres) execStmt(ctx context.Context, stmt string, args ...any) (*sql.Rows, error) <span class="cov0" title="0">{
+        preStmt, err := store.db.Prepare(stmt)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, fmt.Errorf("prepare stmt[%s]: %w", stmt, err)
+        }</span>
+
+        <span class="cov0" title="0">rows, err := preStmt.QueryContext(ctx, args...)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, fmt.Errorf("execute stmt [%s] args [%v]: %w", stmt, args, err)
+        }</span>
+
+        <span class="cov0" title="0">return rows, nil</span>
+}
+
+// Получение заказов пользователя с конкретными статусами
+func (store *Postgres) OrdersByStatuses(ctx context.Context, userID user.ID, statuses []order.Status) ([]order.Order, error) <span class="cov0" title="0">{
+        stmt := `
+SELECT o_id, user_id, num, status, s.acc, upload
+FROM ordr
+LEFT OUTER JOIN o_sum s USING (o_id)
+WHERE user_id=$1
+AND status = ANY($2);`
+
+        pqArr := make([]string, len(statuses))
+        for i := range statuses </span><span class="cov0" title="0">{
+                pqArr[i] = statuses[i].String()
+        }</span>
+
+        <span class="cov0" title="0">rows, err := store.execStmt(ctx, stmt,
+                userID.String(),
+                pq.Array(pqArr),
+        )
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, fmt.Errorf("ordersByStatuses: %w", err)
+        }</span>
+
+        <span class="cov0" title="0">return ordersRowsScan(rows)</span>
+}
+
+// Обновление нескольких заказов
+func (store *Postgres) OrdersUpdate(ctx context.Context, orders []order.Order) error <span class="cov0" title="0">{
+        stmt1 := `
+UPDATE ordr
+SET status=$2, upload=$3
+WHERE o_id = $1;`
+
+        stmt2 := `
+UPDATE o_sum
+SET acc=$2
+WHERE o_id = $1;`
+
+        tx, err := store.db.BeginTx(ctx, nil)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov0" title="0">ps1, err := tx.PrepareContext(ctx, stmt1)
+        if err != nil </span><span class="cov0" title="0">{
+                tx.Rollback()
+                return err
+        }</span>
+
+        <span class="cov0" title="0">ps2, err := tx.PrepareContext(ctx, stmt2)
+        if err != nil </span><span class="cov0" title="0">{
+                tx.Rollback()
+                return err
+        }</span>
+
+        <span class="cov0" title="0">for i := range orders </span><span class="cov0" title="0">{
+                oi := orders[i].Info()
+                ordrID := orders[i].ID().String()
+                if _, err := ps1.ExecContext(
+                        ctx,
+                        ordrID,
+                        oi.Status().String(),
+                        oi.Date(),
+                ); err != nil </span><span class="cov0" title="0">{
+                        tx.Rollback()
+                        return err
+                }</span>
+
+                <span class="cov0" title="0">if oi.Accrual() == nil </span><span class="cov0" title="0">{
+                        continue</span>
+                }
+
+                <span class="cov0" title="0">if _, err := ps2.ExecContext(
+                        ctx,
+                        ordrID,
+                        oi.Accrual().ToFloat(),
+                ); err != nil </span><span class="cov0" title="0">{
+                        tx.Rollback()
+                        return err
+                }</span>
+        }
+
+        <span class="cov0" title="0">return tx.Commit()</span>
+}
+
+// Получение заказов по статусу
+func (store *Postgres) OrdersBatch(ctx context.Context, statuses []order.Status) ([]order.Order, error) <span class="cov0" title="0">{
+        stmt2 := `
+SELECT o.o_id, o.user_id, o.num, o.status, s.acc, o.upload
+FROM ordr o
+LEFT OUTER JOIN o_sum s USING (o_id)
+WHERE status = ANY($1);`
+
+        var orderDB orderDB
+
+        preStmt, err := store.db.Prepare(stmt2)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, fmt.Errorf("prepare stmt: %w", err)
+        }</span>
+
+        <span class="cov0" title="0">pqArr := make([]string, len(statuses))
+        for i := range statuses </span><span class="cov0" title="0">{
+                pqArr[i] = statuses[i].String()
+        }</span>
+
+        <span class="cov0" title="0">rows, err := preStmt.QueryContext(ctx, pq.Array(pqArr))
+        if err != nil || rows.Err() != nil </span><span class="cov0" title="0">{
+                return nil, fmt.Errorf("execute stmt: %w", err)
+        }</span>
+
+        <span class="cov0" title="0">var orders []order.Order
+
+        for rows.Next() </span><span class="cov0" title="0">{
+                if err := rows.Scan(
+                        &amp;orderDB.orderID,
+                        &amp;orderDB.userID,
+                        &amp;orderDB.number,
+                        &amp;orderDB.status,
+                        &amp;orderDB.acc,
+                        &amp;orderDB.date,
+                ); err != nil </span><span class="cov0" title="0">{
+                        return nil, fmt.Errorf("row scan: %w", err)
+                }</span>
+
+                <span class="cov0" title="0">ordr, err := orderDB.order()
+                if err != nil </span><span class="cov0" title="0">{
+                        return nil, fmt.Errorf("build order: %w", err)
+                }</span>
+
+                <span class="cov0" title="0">orders = append(orders, ordr)</span>
+        }
+
+        <span class="cov0" title="0">return orders, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file24" style="display: none">package auth
+
+import (
+        "context"
+        "fmt"
+
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/user"
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/service/internal"
+)
+
+// AUTH
+type userRepo interface {
+        SaveUser(context.Context, user.User) (user.User, error)
+        UserByLogin(context.Context, user.Login) (user.User, error)
+}
+
+type hasher interface {
+        Hash(user.Password) (string, error)
+        Equals(string, user.Password) bool
+}
+
+type authService struct {
+        userRepo userRepo
+        hasher   hasher
+}
+
+func NewAuthService(userRepo userRepo, hasher hasher) authService <span class="cov8" title="1">{
+        return authService{userRepo: userRepo, hasher: hasher}
+}</span>
+
+func (srv authService) Register(ctx context.Context, authUser user.AuthUser) (user.User, error) <span class="cov8" title="1">{
+        hashPass, err := srv.hasher.Hash(authUser.Pass())
+        if err != nil </span><span class="cov8" title="1">{
+                return user.User{}, err
+        }</span>
+
+        <span class="cov8" title="1">userToSave := user.New(authUser.Login(), hashPass)
+        if err := userToSave.Valid(); err != nil </span><span class="cov0" title="0">{
+                return user.User{}, fmt.Errorf("authService Register: %w", err)
+        }</span>
+
+        <span class="cov8" title="1">usr, err := srv.userRepo.SaveUser(ctx, userToSave)
+        if err != nil </span><span class="cov0" title="0">{
+                return user.User{}, err
+        }</span>
+
+        <span class="cov8" title="1">return usr, nil</span>
+}
+
+func (srv authService) Login(ctx context.Context, authUser user.AuthUser) (user.User, error) <span class="cov0" title="0">{
+        usr, err := srv.userRepo.UserByLogin(ctx, authUser.Login())
+        if err != nil </span><span class="cov0" title="0">{
+                return user.User{}, fmt.Errorf("authService Login: %w", err)
+        }</span>
+
+        <span class="cov0" title="0">if err := usr.Valid(); err != nil </span><span class="cov0" title="0">{
+                return user.User{}, internal.ErrFieldConflict{
+                        Field:  usr.Login(),
+                        ErrStr: err.Error(),
+                }
+        }</span>
+
+        <span class="cov0" title="0">if !srv.hasher.Equals(usr.Hash(), authUser.Pass()) </span><span class="cov0" title="0">{
+                return user.User{}, internal.ErrFieldConflict{
+                        Field:  authUser.Pass(),
+                        ErrStr: "неверный пароль",
+                }
+        }</span>
+
+        <span class="cov0" title="0">return usr, nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file25" style="display: none">package internal
+
+type ErrFieldConflict struct {
+        Field  any
+        ErrStr string
+}
+
+func (e ErrFieldConflict) Data() any     <span class="cov0" title="0">{ return e.Field }</span>
+func (e ErrFieldConflict) Error() string <span class="cov0" title="0">{ return e.ErrStr }</span>
+</pre>
+		
+		<pre class="file" id="file26" style="display: none">package order
+
+import (
+        "context"
+        "fmt"
+
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order"
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/user"
+)
+
+type orderGetter interface {
+        OrdersByStatuses(context.Context, user.ID, []order.Status) ([]order.Order, error)
+}
+
+type orderService struct {
+        orderRepo orderGetter
+}
+
+func NewOrderService(orderRepo orderGetter) orderService <span class="cov0" title="0">{
+        return orderService{orderRepo: orderRepo}
+}</span>
+
+// GET /api/user/orders
+func (srv orderService) GetOrders(ctx context.Context, userID user.ID) ([]order.Order, error) <span class="cov0" title="0">{
+        statuses := []order.Status{
+                order.StatusNew,
+                order.StatusProcessing,
+                order.StatusInvalid,
+                order.StatusProcessed,
+        }
+
+        orders, err := srv.orderRepo.OrdersByStatuses(ctx, userID, statuses)
+        if err != nil </span><span class="cov0" title="0">{
+                return nil, fmt.Errorf("orderService GetOrders: %w", err)
+        }</span>
+
+        <span class="cov0" title="0">return orders, nil</span>
+}
+
+func (srv orderService) Withdrawals(ctx context.Context, userID user.ID) ([]order.Order, error) <span class="cov0" title="0">{
+        statuses := []order.Status{order.StatusWithdraw}
+        return srv.orderRepo.OrdersByStatuses(ctx, userID, statuses)
+}</span>
+
+func (srv orderService) Balance(ctx context.Context, userID user.ID) (order.Balance, error) <span class="cov0" title="0">{
+        statuses := []order.Status{order.StatusWithdraw, order.StatusProcessed}
+        orders, err := srv.orderRepo.OrdersByStatuses(ctx, userID, statuses)
+        if err != nil </span><span class="cov0" title="0">{
+                return order.Balance{}, err
+        }</span>
+
+        <span class="cov0" title="0">return getBalance(userID, orders), nil</span>
+}
+</pre>
+		
+		<pre class="file" id="file27" style="display: none">package order
+
+import (
+        "context"
+        "fmt"
+
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order"
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/user"
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/service/internal"
+)
+
+type orderSaver interface {
+        SaveOrder(context.Context, order.Order) error
+        OrdersByStatuses(context.Context, user.ID, []order.Status) ([]order.Order, error)
+}
+
+type saveService struct {
+        accrualRepo accrualRepo
+        orderRepo   orderSaver
+}
+
+type errWithdraw struct {
+        current  float64
+        withdraw float64
+        orderAcc float64
+}
+
+func (e errWithdraw) IsSuccessful() bool <span class="cov0" title="0">{
+        return (e.current - e.withdraw) &lt;= e.orderAcc
+}</span>
+
+func (e errWithdraw) Error() string <span class="cov0" title="0">{
+        return fmt.Sprintf(
+                "баланс [%v], запрос [%v]",
+                e.current-e.withdraw, e.orderAcc,
+        )
+}</span>
+func NewSaveService(accrualRepo accrualRepo, orderRepo orderSaver) saveService <span class="cov0" title="0">{
+        return saveService{
+                accrualRepo: accrualRepo,
+                orderRepo:   orderRepo,
+        }
+}</span>
+
+func (srv saveService) LoadOrder(ctx context.Context, userID user.ID, number order.Number) error <span class="cov0" title="0">{
+        if !ValidNumber(int(number)) </span><span class="cov0" title="0">{
+                return internal.ErrFieldConflict{Field: number, ErrStr: "number not valide"}
+        }</span>
+
+        <span class="cov0" title="0">orderInfo, err := srv.accrualRepo.Load(ctx, number)
+        if err != nil </span><span class="cov0" title="0">{
+                return fmt.Errorf("LoadOrder: %w", err)
+        }</span>
+
+        <span class="cov0" title="0">ordr := order.New(order.NewID(), userID, orderInfo)
+
+        return srv.orderRepo.SaveOrder(ctx, ordr)</span>
+}
+
+func getBalance(userID user.ID, orders []order.Order) order.Balance <span class="cov0" title="0">{
+        var (
+                procAcc order.Accrual
+                withAcc order.Accrual
+        )
+
+        for _, ord := range orders </span><span class="cov0" title="0">{
+                oi := ord.Info()
+                switch oi.Status() </span>{
+                case order.StatusWithdraw:<span class="cov0" title="0">
+                        withAcc = withAcc.Add(oi.Accrual())</span>
+                case order.StatusProcessed:<span class="cov0" title="0">
+                        procAcc = withAcc.Add(oi.Accrual())</span>
+                }
+        }
+
+        <span class="cov0" title="0">total := procAcc - withAcc
+
+        return order.NewBalance(userID, total, withAcc)</span>
+}
+
+func (srv saveService) Withdraw(ctx context.Context, ordr order.Order) error <span class="cov0" title="0">{
+        statuses := []order.Status{order.StatusWithdraw, order.StatusProcessed}
+
+        orders, err := srv.orderRepo.OrdersByStatuses(ctx, ordr.UserID(), statuses)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov0" title="0">orderAcc := ordr.Info().Accrual()
+
+        balance := getBalance(ordr.UserID(), orders)
+
+        accF := orderAcc.ToFloat()
+        if (balance.Current().ToFloat() - balance.Withdraw().ToFloat()) &lt;= accF </span><span class="cov0" title="0">{
+                return errWithdraw{
+                        current:  balance.Current().ToFloat(),
+                        withdraw: balance.Withdraw().ToFloat(),
+                        orderAcc: orderAcc.ToFloat(),
+                }
+        }</span>
+
+        <span class="cov0" title="0">return srv.orderRepo.SaveOrder(ctx, ordr)</span>
+}
+
+func ValidNumber(number int) bool <span class="cov0" title="0">{
+        return (number%10+checksum(number/10))%10 == 0
+}</span>
+
+func checksum(number int) int <span class="cov0" title="0">{
+        var luhn int
+
+        for i := 0; number &gt; 0; i++ </span><span class="cov0" title="0">{
+                cur := number % 10
+
+                if i%2 == 0 </span><span class="cov0" title="0">{
+                        cur = cur * 2
+                        if cur &gt; 9 </span><span class="cov0" title="0">{
+                                cur = cur%10 + cur/10
+                        }</span>
+                }
+
+                <span class="cov0" title="0">luhn += cur
+                number = number / 10</span>
+        }
+        <span class="cov0" title="0">return luhn % 10</span>
+}
+</pre>
+		
+		<pre class="file" id="file28" style="display: none">package order
+
+import (
+        "context"
+        "errors"
+        "log/slog"
+        "time"
+
+        "github.com/AndreyVLZ/silver-goggles/internal/gophermart/app/internal/model/order"
+)
+
+type errRetryable interface {
+        error
+        Retry() int64
+}
+
+type ordersUpdater interface {
+        OrdersBatch(context.Context, []order.Status) ([]order.Order, error)
+        OrdersUpdate(context.Context, []order.Order) error
+}
+
+type uService struct {
+        accRepo   accrualRepo
+        orderRepo ordersUpdater
+        interval  int
+        exit      chan (struct{})
+        log       *slog.Logger
+}
+
+func NewUService(accRepo accrualRepo, orderRepo ordersUpdater, interval int, log *slog.Logger) uService <span class="cov0" title="0">{
+        return uService{
+                accRepo:   accRepo,
+                orderRepo: orderRepo,
+                interval:  interval,
+                exit:      make(chan struct{}),
+                log:       log,
+        }
+}</span>
+
+func (usrv uService) Name() string <span class="cov0" title="0">{ return "uService" }</span>
+
+func (usrv uService) Stop() error <span class="cov0" title="0">{
+        usrv.exit &lt;- struct{}{}
+        return nil
+}</span>
+
+func (usrv uService) Start() error <span class="cov0" title="0">{
+        ctx, cancel := context.WithCancel(context.Background())
+        go func() </span><span class="cov0" title="0">{
+                for </span><span class="cov0" title="0">{
+                        select </span>{
+                        case &lt;-time.After(time.Duration(usrv.interval) * time.Second):<span class="cov0" title="0">
+                                if err := usrv.run(ctx); err != nil </span><span class="cov0" title="0">{
+                                        var errRetry errRetryable
+                                        if errors.As(err, &amp;errRetry) </span><span class="cov0" title="0">{
+                                                usrv.log.Debug("uService", "retry", errRetry.Retry())
+                                                time.Sleep(time.Second * time.Duration(errRetry.Retry()))
+                                        }</span> else<span class="cov0" title="0"> {
+                                                usrv.log.Warn("uService", "err", err)
+                                        }</span>
+                                }
+                        case &lt;-usrv.exit:<span class="cov0" title="0">
+                                cancel()
+                                return</span>
+                        }
+                }
+        }()
+        <span class="cov0" title="0">return nil</span>
+}
+
+func (usrv uService) run(ctx context.Context) error <span class="cov0" title="0">{
+        statuses := []order.Status{
+                order.StatusNew,
+                order.StatusProcessing,
+        }
+
+        orders, err := usrv.orderRepo.OrdersBatch(ctx, statuses)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov0" title="0">if len(orders) == 0 </span><span class="cov0" title="0">{
+                usrv.log.Debug("нет данных")
+                return nil
+        }</span>
+
+        <span class="cov0" title="0">resOrders, err := usrv.getUpdates(ctx, orders)
+        if err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov0" title="0">if err := usrv.orderRepo.OrdersUpdate(ctx, resOrders); err != nil </span><span class="cov0" title="0">{
+                return err
+        }</span>
+
+        <span class="cov0" title="0">return nil</span>
+}
+
+// получение обновленной info для заказов
+func (uService uService) getUpdates(ctx context.Context, orders []order.Order) ([]order.Order, error) <span class="cov0" title="0">{
+        resOrders := make([]order.Order, len(orders))
+        for _, ordr := range orders </span><span class="cov0" title="0">{
+                oi, err := uService.accRepo.Load(ctx, ordr.Info().Number())
+                if err != nil </span><span class="cov0" title="0">{
+                        return nil, err
+                }</span>
+
+                <span class="cov0" title="0">if oi.Status().String() == ordr.Info().Status().String() </span><span class="cov0" title="0">{
+                        // обновлений нет
+                        continue</span>
+                }
+
+                <span class="cov0" title="0">if err := ordr.UpdateInfo(oi); err != nil </span><span class="cov0" title="0">{
+                        return nil, err
+                }</span>
+
+                <span class="cov0" title="0">resOrders = append(resOrders, ordr)</span>
+        }
+
+        <span class="cov0" title="0">return resOrders, nil</span>
+}
+</pre>
+		
+		</div>
+	</body>
+	<script>
+	(function() {
+		var files = document.getElementById('files');
+		var visible;
+		files.addEventListener('change', onChange, false);
+		function select(part) {
+			if (visible)
+				visible.style.display = 'none';
+			visible = document.getElementById(part);
+			if (!visible)
+				return;
+			files.value = part;
+			visible.style.display = 'block';
+			location.hash = part;
+		}
+		function onChange() {
+			select(files.value);
+			window.scrollTo(0, 0);
+		}
+		if (location.hash != "") {
+			select(location.hash.substr(1));
+		}
+		if (!visible) {
+			select("file0");
+		}
+	})();
+	</script>
+</html>
